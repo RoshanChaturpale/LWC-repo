@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="publisher">
+<lightning-record-edit-form object-api-name="Account">
+<lightning-input-field field-name="Name" onchange={nameHandler}></lightning-input-field>
+</lightning-record-edit-form>
+
+<lightning-button variant="brand" label="Send to subscriber" icon-name="utility:send" onclick={sendButtonHandler}></lightning-button>
+    </lightning-card>
+</template>

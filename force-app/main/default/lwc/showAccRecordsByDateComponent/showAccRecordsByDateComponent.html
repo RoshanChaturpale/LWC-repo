@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Records shown by date and type">
+
+        Total Records Found = {totalRecords}
+        <lightning-record-edit-form object-api-name="Account">
+        <lightning-input type="Date" label="From Date" data-formfield="fromDate" name="fromDate" onchange={fromDateHandler}></lightning-input> <br>
+        <lightning-input type="Date" label="To Date" data-formfield="toDate" name="toDate" onchange={toDateHandler}></lightning-input> <br>
+        <lightning-input-field field-name="Type" onchange={typeFieldHandler}></lightning-input-field>
+
+<template lwc:if={showTableFlag}>
+        <lightning-datatable
+            key-field="Id"
+            data={accList}
+            columns={columns}                     
+            > 
+</lightning-datatable>
+</template>
+
+<template lwc:if={showSpinnerFlag}>
+<div class="exampleHolder">
+    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+</div>
+
+</template>
+    </lightning-record-edit-form>
+    </lightning-card>
+</template> 

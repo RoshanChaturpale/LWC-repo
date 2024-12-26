@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Child Component">
+
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+                <tr>
+                    <th scope="col"><span class="slds-truncate" >Account Name</span></th>
+                    <th scope="col"><span class="slds-truncate">Type</span></th>
+                    <th scope="col"><span class="slds-truncate">Rating</span></th>
+                    <th scope="col"><span class="slds-truncate">SLA</span></th>
+                    <th scope="col"><span class="slds-truncate">CreatedDate</span></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                    <template for:each={accountList} for:item="acc">
+                            <tr key={acc.id}>
+                                <td> {acc.Name} </td>
+                                <td> {acc.Type} </td>
+                                <td> {acc.Rating} </td>
+                                <td> {acc.SLA__c} </td>
+                                <td> {acc.CreatedDate} </td>
+                                    
+                                
+                            </tr>
+
+                    </template>            
+            </tbody>
+    </table>
+
+    </lightning-card>
+</template>

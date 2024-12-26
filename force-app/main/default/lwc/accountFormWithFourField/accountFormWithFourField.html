@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Account form with condition">
+<lightning-record-edit-form object-api-name="Account">
+<lightning-input-field field-name="Name" onchange={handleNameField}></lightning-input-field>
+<lightning-input-field field-name="Website" onchange={handleWebsiteField}></lightning-input-field>
+<lightning-input-field field-name="AccountNumber" onchange={handleAccountNumberField}></lightning-input-field>
+<lightning-input-field field-name="Sic" onchange={handleSicField}></lightning-input-field>
+</lightning-record-edit-form>
+
+<lightning-button label="Save" variant="brand" icon-name="utility:save" onclick={handleSaveButton}></lightning-button> <br>
+
+Message = {msg}
+    </lightning-card>
+</template>

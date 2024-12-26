@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Applicant Form">
+<lightning-record-edit-form object-api-name="Applicant__c">
+<lightning-input-field field-name="Name" onchange={handleNameField}></lightning-input-field>
+<lightning-input-field field-name="Gender__c" onchange={handleGenderField}></lightning-input-field>
+<lightning-input-field field-name="Police_Verification__c" onchange={handlePoliceVerField}></lightning-input-field>
+</lightning-record-edit-form>
+
+<lightning-button label="Save" variant="brand" onclick={saveButtonHandler}></lightning-button> <br>
+
+Message = {msg}
+        
+    </lightning-card>
+</template>

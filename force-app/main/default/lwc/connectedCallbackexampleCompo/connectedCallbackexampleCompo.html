@@ -1,0 +1,15 @@
+<template>
+
+    Hello World
+    <lightning-card title="Connected callback function">
+      
+        <lightning-record-edit-form object-api-name="Account"></lightning-record-edit-form>
+        <lightning-datatable
+            key-field="Id"
+            data={accList}
+            columns={columns}    
+                              
+            > 
+</lightning-datatable>
+    </lightning-card>
+</template>

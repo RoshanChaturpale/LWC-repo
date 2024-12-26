@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Publisher Applicant">
+        <lightning-record-edit-form object-api-name="Applicant__c">
+            <lightning-input-field field-name="Name" onchange={NameHandler}></lightning-input-field>
+            <lightning-button variant="brand" label="Show" icon-name="utility:send" onclick={sendButtonHandler}></lightning-button>
+            </lightning-record-edit-form>
+    </lightning-card>
+</template>

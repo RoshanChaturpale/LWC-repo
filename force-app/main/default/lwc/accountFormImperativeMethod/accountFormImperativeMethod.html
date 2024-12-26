@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Account Form Imperative Method">
+     <lightning-record-edit-form object-api-name="Account">
+    <lightning-input-field field-name="Name" onchange={nameOnChange}></lightning-input-field>
+    </lightning-record-edit-form>
+    <lightning-button label="Submit" variant="brand" onclick={handleSubmitButton}></lightning-button> <br> <br>
+
+    Message = {msg}
+     
+    </lightning-card>
+</template>

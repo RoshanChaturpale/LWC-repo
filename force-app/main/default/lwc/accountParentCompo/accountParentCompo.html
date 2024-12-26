@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Parent Component">
+<lightning-record-edit-form object-api-name="Account">
+    <lightning-input-field field-name="Name" onchange={nameFieldHandler}></lightning-input-field>
+</lightning-record-edit-form> 
+
+<lightning-button label="Display Related Contacts" variant="success" icon-name="utility:send" onclick={displayButtonHandler}></lightning-button>
+        <c-account-child-compo contatc-list={conList}></c-account-child-compo>
+    </lightning-card>
+</template>
+

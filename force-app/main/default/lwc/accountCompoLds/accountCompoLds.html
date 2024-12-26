@@ -1,0 +1,13 @@
+<template>
+   <lightning-card title="New Account Form" onsubmit={showSuccessToast}>
+    <lightning-record-edit-form      object-api-name="Account">
+        <lightning-input-field field-name="Name"></lightning-input-field>
+        <lightning-input-field field-name="Rating"></lightning-input-field>
+        <lightning-input-field field-name="SLA__c"></lightning-input-field>
+        <lightning-input-field field-name="Type" ></lightning-input-field>
+        <lightning-input-field field-name="ParentId" required="true"></lightning-input-field>
+        
+        <lightning-button type="submit" label="Create Account" variant="Brand" ></lightning-button>
+    </lightning-record-edit-form>
+</lightning-card>
+</template>

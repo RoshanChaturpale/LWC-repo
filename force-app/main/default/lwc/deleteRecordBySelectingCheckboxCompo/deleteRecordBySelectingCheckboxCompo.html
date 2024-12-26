@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Delete Records by selecting checkbox">
+        <lightning-record-edit-form>
+            <lightning-input-field field-name="Type" onchange={typeFieldHandler}></lightning-input-field>
+        </lightning-record-edit-form>
+
+        <lightning-datatable
+            key-field="Id"
+            data={accList}
+            columns={columns}                         
+            > 
+</lightning-datatable>
+    </lightning-card>
+</template>

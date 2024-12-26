@@ -1,0 +1,11 @@
+<template>
+  <lightning-card title="Applicant Compo">
+<lightning-record-edit-form object-api-name="Account">
+<lightning-input-field field-name="Name" onchange={nameFieldHandler}></lightning-input-field>
+</lightning-record-edit-form>
+
+<lightning-button variant="brand" label="Send Related Address" icon-name="utility:send" onclick={sendButtonHandler}></lightning-button>
+<c-address-child-compo add-list={addressList}></c-address-child-compo>
+  </lightning-card>
+
+</template>

@@ -1,0 +1,16 @@
+<template>
+<lightning-card title="Another way to create Address form">
+<lightning-record-edit-form object-api-name={objAddress} onsubmit={showSuccessToast}>
+<lightning-input-field field-name={parentField}></lightning-input-field>
+<lightning-input-field field-name={addOne}></lightning-input-field>
+<lightning-input-field field-name={addTwo}></lightning-input-field>
+<lightning-input-field field-name={country}></lightning-input-field>
+<lightning-input-field field-name={state}></lightning-input-field>
+<lightning-input-field field-name={city}></lightning-input-field>   
+<lightning-input-field field-name={pan}></lightning-input-field>
+<lightning-input-field field-name={pin}></lightning-input-field>
+
+<lightning-button type="submit" label="Save" variant="destructive"></lightning-button>
+</lightning-record-edit-form>
+</lightning-card>
+</template>

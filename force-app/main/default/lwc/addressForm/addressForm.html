@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Address Form">
+<lightning-record-edit-form object-api-name="Address__c" onsubmit={showSuccessToast}>
+
+    <div class="slds-grid">
+    <div class="slds-col slds-size_1-of-2">
+    <lightning-input-field field-name="Applicant__c"></lightning-input-field>
+    <lightning-input-field field-name="Address_Line_1__c"></lightning-input-field>
+    <lightning-input-field field-name="Address_Line_2__c"></lightning-input-field>
+</div>
+
+<div class="slds-col slds-size_2-of-2">
+<lightning-input-field field-name="City__c"></lightning-input-field>
+<lightning-input-field field-name="State__c"></lightning-input-field>
+<lightning-input-field field-name="Country__c"></lightning-input-field>
+<lightning-input-field field-name="Pan_Card__c"></lightning-input-field>
+<lightning-input-field field-name="Pin_Code__c"></lightning-input-field>
+</div>
+
+</div>
+<lightning-button type="submit" label="Save"></lightning-button>
+</lightning-record-edit-form>
+
+    </lightning-card>
+</template>

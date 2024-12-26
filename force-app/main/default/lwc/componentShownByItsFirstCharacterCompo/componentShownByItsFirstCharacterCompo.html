@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Record shown by first character">
+
+        Total Records Found = {totalRecords}
+        <lightning-record-edit-form object-api-name="Account">
+
+            <lightning-input-field field-name="Name" onchange={nameFieldHandler}></lightning-input-field>
+            <lightning-input-field field-name="Type" onchange={typeFieldHandler}></lightning-input-field>
+
+        </lightning-record-edit-form>
+
+        <template lwc:if={showTableFlag}>
+        <lightning-datatable
+            key-field="Id"
+            data={accList}
+            columns={columns}    
+            draft-values={draftValues}                   
+            > 
+</lightning-datatable>
+</template>
+
+   <template lwc:if={showSpinnerFlag}>     
+<div class="exampleHolder">
+    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+</div>
+</template>
+    </lightning-card>
+</template>

@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="Account search on the base of type">
+
+        Total Records Found = {totalRecords}
+        <lightning-record-edit-form object-api-name="Account">
+<lightning-input-field field-name="Type" onchange={typeFieldHandler}></lightning-input-field>
+        </lightning-record-edit-form>
+
+
+        <lightning-button variant="brand" label="Search" onclick={searchButtonHandler}></lightning-button> <br>
+
+        <template lwc:if={showTableFlag}>
+
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+                <tr>
+                    <th scope="col"><span class="slds-truncate" >Account Name</span></th>
+                    <th scope="col"><span class="slds-truncate">Type</span></th>
+                    <th scope="col"><span class="slds-truncate">Rating</span></th>
+                    <th scope="col"><span class="slds-truncate">SLA</span></th>
+                    <th scope="col"><span class="slds-truncate">CreatedDate</span></th>
+
+                </tr>
+            </thead>
+            <tbody>
+            
+                
+                    <template for:each={accList} for:item="acc">
+                            <tr key={acc.id}>
+                                <td> {acc.Name} </td>
+                                <td> {acc.Type} </td>
+                                <td> {acc.Rating} </td>
+                                <td> {acc.SLA__c} </td>
+                                <td> {acc.CreatedDate} </td>
+                                    
+                                
+                            </tr>
+
+                    </template>            
+            </tbody>
+    </table>
+</template>
+    </lightning-card>
+</template>

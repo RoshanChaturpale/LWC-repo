@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Account Form with two field">
+        <lightning-record-edit-form object-api-name="Account">
+            <lightning-input-field field-name="Name" onchange={nameOnChange}></lightning-input-field>
+            <lightning-input-field field-name="Rating" onchange={ratingOnChange}></lightning-input-field>
+        </lightning-record-edit-form>
+
+        <lightning-button label="Save" variant="brand" icon-name="utility:save" onclick={handleSaveButton}></lightning-button> <br>
+
+        Message = {msg}
+    </lightning-card>
+</template>

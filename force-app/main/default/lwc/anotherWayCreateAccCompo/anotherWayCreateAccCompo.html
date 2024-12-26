@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Another way to create Account" onsubmit={showSuccessToast}>
+        <lightning-record-edit-form object-api-name = {objAccount}>
+            <lightning-input-field field-name={name} ></lightning-input-field>
+            <lightning-input-field field-name={rating} ></lightning-input-field>
+            <lightning-input-field field-name={type} ></lightning-input-field>
+            <lightning-input-field field-name={active} ></lightning-input-field>
+            <lightning-input-field field-name={sla} ></lightning-input-field>
+            <lightning-input-field field-name={parentAccount} required="true"></lightning-input-field>
+
+            <lightning-button type="submit" label="Create Button" variant="brand"></lightning-button>
+
+        </lightning-record-edit-form>
+    
+
+    </lightning-card> 
+</template>

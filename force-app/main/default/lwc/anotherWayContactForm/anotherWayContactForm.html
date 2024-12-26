@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Contact Form another way" onsubmit={showSuccessToast}>
+
+<lightning-record-edit-form object-api-name={conObject}>
+    <template if:true={fieldShowFlag}>
+    <lightning-input-field field-name={salutation}></lightning-input-field>
+    <lightning-input-field field-name={firstName}></lightning-input-field>
+    <lightning-input-field field-name={lastName}></lightning-input-field>
+    <lightning-input-field field-name={parentAcc}></lightning-input-field>
+    <lightning-input-field field-name={email}></lightning-input-field>
+    <lightning-input-field field-name={mobile}></lightning-input-field>
+
+</template>
+<lightning-button variant="brand" label="Show" onclick={handleShowButton}></lightning-button> &nbsp;
+    <lightning-button type="submit" label="Save" variant="brand"></lightning-button>
+
+    
+</lightning-record-edit-form>
+    </lightning-card>
+</template>

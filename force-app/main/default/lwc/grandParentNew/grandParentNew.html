@@ -1,0 +1,11 @@
+<template>
+
+    <h1><strong>Parent to child multilevel component communication</strong></h1>
+    <lightning-card title="Grand Parent">
+        Grand parent ka x = {x} <br>
+
+        <lightning-button variant="brand" label="Send" icon-name="utility:send" onclick={sendButtonHandler}></lightning-button>
+        <c-parent-new y={x}></c-parent-new>
+    </lightning-card>
+</template>
+

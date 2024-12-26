@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Child Component">
+     <lightning-record-edit-form object-api-name="Account">
+<lightning-input-field field-name="Name" onchange={nameFieldHandler}></lightning-input-field>
+     </lightning-record-edit-form>
+
+     child Data = {objAccount.Name} <br>
+        
+     <lightning-button label="Send to parent" variant="brand" icon-name="utility:send" onclick={sendButtonHandler}></lightning-button>
+    </lightning-card>
+</template>

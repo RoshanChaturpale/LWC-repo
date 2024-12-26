@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Parent Compo">
+Parent Compo <br>
+
+x = 100 <br> <br>
+
+<lightning-button label="Send to parent" variant="success" icon-name="utility:send" onclick={sendButtonHandler}></lightning-button>
+<c-child-compo z={x}></c-child-compo>
+    </lightning-card>
+</template>

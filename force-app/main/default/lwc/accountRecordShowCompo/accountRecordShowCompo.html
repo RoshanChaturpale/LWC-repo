@@ -1,0 +1,20 @@
+<template>
+    <lightning-card>
+        Total Records Found = {totalRecords} <br>
+        
+        <lightning-record-edit-form object-api-name="Account">
+<lightning-input-field field-name="Name" onchange={nameHandler}></lightning-input-field>
+        </lightning-record-edit-form>
+
+        <lightning-button variant="brand" label="Show" onclick={showButtonHandler}></lightning-button>
+        <lightning-datatable
+            key-field="Id"
+            data={accList}
+            columns={columns}    
+            draft-values={draftValues}                    
+            > 
+</lightning-datatable>
+        
+
+</lightning-card>
+</template>
